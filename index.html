@@ -23,57 +23,81 @@
         <div class="search div mb-4">
             <h5 class="justify-content-center pt-2 pl-3">Search by City:</h5>
             <form class="form-inline my-2 my-lg-0 mt-3 ml-3"></form>
-            <input class="form-contro; mr-sm-2 florat-left" type="search" placeholder="search" id="searchbar"aria-label="search">
+            <input class="form-control; mr-sm-2 float-left" type="search" placeholder="Search" id="searchbar"aria-label="search">
             <button id="searchbtn" class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa-search"></i></button>   
-            <div class="col-md-9">.col-md-6</div>
-    <div class="card-group">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
+        
+        </form>
         </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
+        <h5 class="justify-content-center pt-2 pl-3">Searched for Cities </h5>
+        <div class="container my-3 col-12" id= "searched-cities-container">
         </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            <div class="card-group">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-            
-                  </div>
-                </div>
-              </div>
+    </div>
 
-          </div>
+
+        <div class="Today's-weather col-9 pt-3">
+            <div class="bg-light p-3">
+                <h2 class="justify-content-center text-dark" id="city-name"></h2>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <p id=" today-temp"></p>
+                    <p id= "today-humidity"></p>
+                    <p id= "today-wind"></p>
+                    <img id= "today icon div" src="">
+                    </div>
+            </div>
         </div>
-      </div>
+
+
+
+
+        <div class= "five-day-div bg-light p-3 m-3 w-100">
+            <div class= "bg-light">
+                <H5 class= "text-dark">5 Day Weather Forecast</H5>
+            </div>
+            
+        <div class= "row justify-content-center">
+            <div id= "day" class="card-body mx-2 my-2">
+                <h5 id= "date"></h5>
+                <p id="five day temp"></p>
+                <p id="five day humidity"></p>
+                <img id="five day icon" src="">
+                </div>
+
+            
+                    <div id= "day1" class="card-body mx-2 my-2">
+                        <h5 id= "1date"></h5>
+                        <p id="1five day temp"></p>
+                        <p id="1five day humidity"></p>
+                        <img id="1five day icon" src="">
+                        </div>
+                        
+                            <div id= "day2" class="card-body mx-2 my-2">
+                                <h5 id= "2date"></h5>
+                                <p id="2five day temp"></p>
+                                <p id="2five day humidity"></p>
+                                <img id="2five day icon" src="">
+                                </div>
+                                
+                                    
+                                        <div id= "day3" class="card-body mx-2 my-2">
+                                            <h5 id= "3date"></h5>
+                                            <p id="3five day temp"></p>
+                                            <p id="3five day humidity"></p>
+                                            <img id="3five day icon" src="">
+                                            </div>
+
+                                         <div id= "day4" class="card-body mx-2 my-2">
+                                        <h5 id= "4date"></h5>
+                                        <p id="4five day temp"></p>
+                                        <p id="4five day humidity"></p>
+                                        <img id="4five day icon" src="">
+                                        </div>
+        </div>
+
+
+
+</div>
+    
 
     
   </div>
