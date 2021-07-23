@@ -6,3 +6,18 @@
     color: white;
     
 }
+.listbtn {
+
+}
+.left div {
+    height: 50%;
+}
+.card-body {
+    background-color: cadetblue;
+    color: white;
+}
+#searchbtn {
+    background-color: #3d6488;
+    color: whitesmoke;
+    border-radius: 8px;
+}
