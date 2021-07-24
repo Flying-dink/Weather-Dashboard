@@ -21,10 +21,10 @@
 //Create Date Display
 function renderDate(){
     var today = moment().format('DD-MM-YYYY')
-    var date = document.getElementById("currentDay");
-    date.textContent = "+today+"
+   $('#current-day').append(today);
+ 
 }
-renderDate();
+
 
 //let 
 //let dd = String(today.getDate().patStart(2,'0'));
@@ -57,7 +57,7 @@ let url="";
 let APIkey="";
 let queryurl="";
 let currenturl="";
-let citiesDiv= document.getElementById("searched cities container");
+let citiesDiv= document.getElementById("searched-cities-container");
 let cities= [];
 listClicker();
 searchClicker();
@@ -121,27 +121,31 @@ function searchClicker() {
 // 2 API calls 1 for current conditions and 1 for 5 day forecast
 
 function APIcalls() {
-    url= "https://api.openweathermap.org/data/2.5/forcast?q=";
-    currenturl = "https:// api.openweathermap.org/data/2.5/weather?q=";
+    url= "https://api.openweathermap.org/data/2.5/forecast?q=";
+    currenturl = "https://api.openweathermap.org/data/2.5/weather?q=";
 
-//APIkey="&aapid=2cf9a1c2beb1b1fc37f62405ffef77ee";
+APIkey="&appid=8b668a5ffbcbc6cece2c6f9eb9ed67bf";
 queryurl = url + city + APIkey;
 currentWeatherUrl= currenturl + city + APIkey;
 
-$("name of city").text("Today's Weather In"+city);
+
+
+$("#city-name").text(`Today's Weather In ${city}`);
+
+
+
 $.ajax({
     url: queryurl,
     method: "GET",
 }).then (function(response) {
     let day_Number = 0;
 
-for(let i=0; i < response.list.length; i++) {
-if( response.list[i].dt_txt.split(" ")[1]=="15:00:00")
-
+    for(let i=0; i < response.list.length; i++) {
+    if( response.list[i].dt_txt.split(" ")[1]=="15:00:00")
 {
     let day = response.list[i].dt_txt.split("-")[2].split("-")[0];
     let month = response.list[i].dt_txt.split("-")[1];
-    let year = response.list.[i].dt_txt.split("-")[0];
+    let year = response.list[i].dt_txt.split("-")[0];
     $("#" + day_Number + "five_day_temp").text("temp:"+String.fromCharCode(176)+"F");
     $("#" + day_Number + "five_day_humidity").text("humidity:"+response.list[i].main.humidity);
     $("#" + day_Number + "five_day_icon").attr("src", "http://openweathermap.org/img/w/"+response.list[i].weather[0].icon+".png");
@@ -159,17 +163,16 @@ $.ajax( {
     url: currentWeatherUrl,
     method: "GET",
 
-})
-then(function(current_data){
+}).then(function(current_data){
     console.log(current_data);
-    let temp = math.round(((current_data.main.temp-273.15)*9/5 +32))
-    consolelog("The Temperature in" +city+ "is:" + temp);
-    $("#today_temp").text("Temperature: " + temp + String.fromCharCode(176)+"F");
-    $("#today_humidity").text("Humidity: "+ current_data.main.humidity);
-    $("#today_wind_speed").text("Wind Speed:"+ current_data.wind.speed);
-    $("#today_icon_div").attr({"src": "http://openweathermap.org/img/w/"+ current_data.weather[0].icon+ ".png",
+    let temp = Math.round(((current_data.main.temp-273.15)*9/5 +32))
+    console.log("The Temperature in" +city+ "is:" + temp);
+    renderDate();
+    $("#today-temp").text("Temperature: " + temp + String.fromCharCode(176)+"F");
+    $("#today-humidity").text("Humidity: "+ current_data.main.humidity);
+    $("#today-wind").text(" Wind Speed:"+ current_data.wind.speed);
+    $("#today-icon-div").attr({"src": "http://openweathermap.org/img/w/"+ current_data.weather[0].icon+ ".png",
 "height":"100px", "width": "100px"});
 })
-
 }
 
