@@ -59,6 +59,7 @@ let queryurl="";
 let currenturl="";
 let citiesDiv= document.getElementById("searched-cities-container");
 let cities= [];
+
 listClicker();
 searchClicker();
 pullCities();
@@ -95,7 +96,7 @@ function  renderButtons() {
 
 function listClicker() {
     $(".listbtn").on("click",function(event) {
-        console/log("hello?")
+        console.log("hello?")
         city = $(this).text().trim();
         APIcalls();
     })
@@ -171,6 +172,7 @@ $.ajax( {
     $("#today-temp").text("Temperature: " + temp + String.fromCharCode(176)+"F");
     $("#today-humidity").text("Humidity: "+ current_data.main.humidity);
     $("#today-wind").text(" Wind Speed:"+ current_data.wind.speed);
+    $("today-uv-index").text("UV index:"+ current_data.uvI);
     $("#today-icon-div").attr({"src": "http://openweathermap.org/img/w/"+ current_data.weather[0].icon+ ".png",
 "height":"100px", "width": "100px"});
 })

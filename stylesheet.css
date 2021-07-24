@@ -12,11 +12,14 @@
     height: 50%;
 }
 .card-body {
-    background-color: cadetblue;
+    background-color: darkblue;
     color: white;
+    width: 175px;
+    height: auto;
+
 }
 #searchbtn {
-    background-color: #3d6488;
+    background-color: darkblue;
     color: whitesmoke;
-    border-radius: 8px;
+    border-radius: 40px;
 }
