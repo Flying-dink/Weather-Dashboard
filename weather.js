@@ -139,21 +139,21 @@ $.ajax({
     url: queryurl,
     method: "GET",
 }).then (function(response) {
-    let day_Number = 0;
+    let dayNumber = 0;
 
     for(let i=0; i < response.list.length; i++) {
-    if( response.list[i].dt_txt.split(" ")[1]=="15:00:00")
+    if( response.list[i].dt_txt.split(" ")[1]== "12:00:00")
 {
     let day = response.list[i].dt_txt.split("-")[2].split("-")[0];
     let month = response.list[i].dt_txt.split("-")[1];
     let year = response.list[i].dt_txt.split("-")[0];
-    $("#" + day_Number + "five_day_temp").text("temp:"+String.fromCharCode(176)+"F");
-    $("#" + day_Number + "five_day_humidity").text("humidity:"+response.list[i].main.humidity);
-    $("#" + day_Number + "five_day_icon").attr("src", "http://openweathermap.org/img/w/"+response.list[i].weather[0].icon+".png");
+    $("#" + dayNumber + "five-day-temp").text("temp:"+String.fromCharCode(176)+"F");
+    $("#" + dayNumber + "five-day-humidity").text("humidity:"+response.list[i].main.humidity);
+    $("#" + dayNumber + "five-day-icon").attr("src", "http://openweathermap.org/img/w/"+response.list[i].weather[0].icon+".png");
 console.log(response.list[i].dt_txt.split("-"));
-console.log(day_Number);
+console.log(dayNumber);
 console.log(response.list[i].main.temp);
-day_Number++;
+dayNumber++;
 
 }
 }
