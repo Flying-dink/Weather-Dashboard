@@ -140,7 +140,7 @@ $.ajax({
     method: "GET",
 }).then (function(response) {
     let dayNumber = 0;
-
+// 5 Day Display
     for(let i=0; i < response.list.length; i++) {
     if( response.list[i].dt_txt.split(" ")[1]== "12:00:00")
 {
@@ -148,7 +148,7 @@ $.ajax({
     let month = response.list[i].dt_txt.split("-")[1];
     let year = response.list[i].dt_txt.split("-")[0];
     $("#" + dayNumber + "five-day-temp").text("temp:"+String.fromCharCode(176)+"F");
-    $("#" + dayNumber + "five-day-humidity").text("humidity:"+response.list[i].main.humidity);
+    $("#" + dayNumber + "five-day-humidity").text("humidity: % "+response.list[i].main.humidity);
     $("#" + dayNumber + "five-day-icon").attr("src", "http://openweathermap.org/img/w/"+response.list[i].weather[0].icon+".png");
 console.log(response.list[i].dt_txt.split("-"));
 console.log(dayNumber);

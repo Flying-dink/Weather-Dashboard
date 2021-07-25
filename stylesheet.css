@@ -16,10 +16,12 @@
     color: white;
     width: 175px;
     height: auto;
+    border-radius: 15px;
 
 }
 #searchbtn {
     background-color: darkblue;
     color: whitesmoke;
     border-radius: 40px;
+    size: 20px;
 }
