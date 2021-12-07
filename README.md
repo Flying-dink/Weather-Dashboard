@@ -2,15 +2,15 @@
 Check The Forecast before You go!
  https://flying-dink.github.io/Weather-Dashboard/
 ![2021-07-24 (2)](https://user-images.githubusercontent.com/83742550/126880108-33acb64b-a60e-4497-ab99-3312c7d000ec.png)
-# ReadMe-Generator
+
 
 
 ## Description
- An app that produces a  professional Readme
+ An app that displays the realtime weather anywhere in the world.
 
-## Table of Contents (Optional)
+## Table of Contents 
 
-If your README is very long, add a table of contents to make it easy for users to find what they need.
+
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -19,26 +19,24 @@ If your README is very long, add a table of contents to make it easy for users t
 
 
 ## Installation
-Install npm
+Click on the link.  No other downloads are necessary.
 
 
 
 
 ## Usage 
-Answer the simple Questions
+Input the desired city in the box and the current conditions will be diplayed as well as the 5 day forecast.
 
-![2021-08-08 (6)](https://user-images.githubusercontent.com/83742550/128620805-8a1a54e7-7100-4022-9ab6-87df561eae8a.png)
-Walk through video
-https://drive.google.com/file/d/1xD_3LtBa42svZO0PhK_L3hozq0_CvQmP/view
+
 
 
 
 ## License
 MIT
-The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
 
 
----
+
+
 
 
 
@@ -52,7 +50,7 @@ The last section of a good README is a license. This lets other developers know 
 
 
 ## Contributing
-Easy way to generate a readme
+Open source
 
 
 
@@ -78,5 +76,5 @@ none
 
 ## Questions?
 
-Flying-Dink
-skyedoll@aol.com
+github.com/Flying-Dink
+skydoll96@gmail.com
